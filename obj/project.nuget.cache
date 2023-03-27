@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EgyoRIlSiI1wA47ckT0wFTxDq3FYO5WNgy+pfJFsQZDbiDctyDxrb4QnvDGz6D/ju/z6JVUvMRsJW8ymjNSuBQ==",
+  "dgSpecHash": "0jZAjzYutp5VTRwFHEn6p/lqSS2QfbtpDaB1emruDiZIdPi4Hqk4czQAHP+hmRIfHu+k2eu2SgYMpkUAZBwsIA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kenkf\\Desktop\\CodingProjects\\CurrencyCalculator\\CurrencyCalculator.csproj",
+  "projectFilePath": "C:\\Users\\kenkf\\Desktop\\CodingProjects\\CurrencyCalculator\\CurrencyConverter.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

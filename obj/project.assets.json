@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kenkf\\Desktop\\CodingProjects\\CurrencyCalculator\\CurrencyCalculator.csproj",
-      "projectName": "CurrencyCalculator",
-      "projectPath": "C:\\Users\\kenkf\\Desktop\\CodingProjects\\CurrencyCalculator\\CurrencyCalculator.csproj",
+      "projectUniqueName": "C:\\Users\\kenkf\\Desktop\\CodingProjects\\CurrencyCalculator\\CurrencyConverter.csproj",
+      "projectName": "CurrencyConverter",
+      "projectPath": "C:\\Users\\kenkf\\Desktop\\CodingProjects\\CurrencyCalculator\\CurrencyConverter.csproj",
       "packagesPath": "C:\\Users\\kenkf\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\kenkf\\Desktop\\CodingProjects\\CurrencyCalculator\\obj\\",
       "projectStyle": "PackageReference",
