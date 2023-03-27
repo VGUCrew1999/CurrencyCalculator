@@ -11,6 +11,8 @@ namespace CurrencyConverter
         public string Name { get; set; }
         public double ConversionRate { get; set; }
 
+        public string Code { get; set; }
+
 
 
     }
