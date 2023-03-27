@@ -31,7 +31,7 @@ namespace CurrencyConverter
                 }
                 catch (FormatException e)
                 {
-                    Console.WriteLine("Invalid Input. Please try again");
+                    Console.WriteLine("Invalid Input. Please try again.");
                     input = 0;
                 }
 
@@ -82,6 +82,9 @@ namespace CurrencyConverter
                 Currency currency1 = SelectValidCurrency(currencies, input);
                 Console.WriteLine();
 
+                //capture the value to convert between
+                double amount = GetValidCurrencyAmount();
+
                 //capture second selected currency
                 Console.WriteLine("Please select a second currency by its code: ");
                 input = Console.ReadLine().ToUpper();
@@ -89,6 +92,12 @@ namespace CurrencyConverter
                 Console.WriteLine();
 
                 //convert between currencies
+                double result = ConvertCurrencies(currency1, currency2, amount);
+
+                //print results
+                Console.WriteLine(amount + " " + currency1.Code + " is approximately " + result + " " + currency2.Code + ".");
+                Console.WriteLine();
+                
 
                 //exit the converter
                 Console.WriteLine("Do you want to convert another currency?");
@@ -105,11 +114,13 @@ namespace CurrencyConverter
 
         }
 
-        static double ConvertCurrencies(Currency currency1, Currency currency2)
+        //converts to US Dollars before converting to the target currency, for simplicity
+        static double ConvertCurrencies(Currency currency1, Currency currency2, double amount)
         {
-            return 1;
+            return (amount * currency2.ConversionRate) / currency1.ConversionRate;
         }
 
+        //make sure the user's selection is a currency in the list
         static Currency SelectValidCurrency(List<Currency> currencies, string selection)
         {
             var currQuery = from currency in currencies
@@ -141,7 +152,30 @@ namespace CurrencyConverter
             return selectedCurrency;
         }
 
-        
+        //make sure the amount is valid and not a letter by mistake
+        static double GetValidCurrencyAmount()
+        {
+            double validAmount = 0;
+            while(validAmount <= 0 )
+            {
+                Console.WriteLine("How much money do you want to convert?");
+                String input = Console.ReadLine();
+                try
+                {
+                    validAmount = Double.Parse(input);
+                }
+                catch(FormatException e)
+                {
+                    Console.WriteLine("Invalid Amount. Please try again.");
+                }
+                if (validAmount <= 0)
+                {
+                    Console.WriteLine("The amount must be greater than 0");
+                }
+
+            }
+            return validAmount;
+        }
 
         static void PrintLogFile()
         {
@@ -150,7 +184,10 @@ namespace CurrencyConverter
 
         static void ShowHelpMenu()
         {
-            Console.WriteLine("Help.");
+            Console.WriteLine("This program converts between a list of currencies based on their conversion rates from March 21, 2023.");
+            Console.WriteLine("It uses each currency's code for the selection process.");
+            Console.WriteLine("The conversion process converts every currency to a common unit. For simplicity, it uses US Dollars.");
+            Console.ReadLine();
         }
 
         static List<Currency> AddCurrencies(List<Currency> currencies)
