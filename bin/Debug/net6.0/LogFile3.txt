@@ -1,0 +1,4 @@
+3/28/2023 6:22:11 PM: Entered the help menu.
+3/28/2023 6:22:16 PM: Exited the help menu.
+3/28/2023 6:22:18 PM: Printed the log file.
+3/28/2023 6:22:34 PM: Exited the program.
