@@ -12,3 +12,6 @@ The conversion rates are from March 21, 2023.
 The conversion process changes currency 1 to US Dollars, then to currency 2 for simplicity.
 The default location for the log file is under bin/debug/net6.0 folder, but it can be changed under the GetFilePath method.
 If an invalid input is entered on the main or converter menu, it will display a message and ask for a new input.
+
+Changes from original project plan:
+It uses a LINQ query to copy the user's selected currency from the list.
