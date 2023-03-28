@@ -1,4 +1,5 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace CurrencyConverter
@@ -17,13 +18,12 @@ namespace CurrencyConverter
             //start menu
             do
             {
-                Console.WriteLine("Main Menu");
+                Console.WriteLine("Main Menu:");
                 Console.WriteLine("1. Currency Converter");
                 Console.WriteLine("2. Print Log File");
                 Console.WriteLine("3. Help");
                 Console.WriteLine("4. Exit");
-
-
+                
 
                 try
                 {
@@ -32,33 +32,35 @@ namespace CurrencyConverter
                 catch (FormatException e)
                 {
                     Console.WriteLine("Invalid Input. Please try again.");
-                    input = 0;
+                    Console.WriteLine();
+                    continue;
                 }
 
                 switch (input)
                 {
                     case 1:
+                        Console.WriteLine();
                         RunConverterMenu(currencies);
                         break;
                     case 2:
+                        Console.WriteLine();
                         PrintLogFile();
                         break;
                     case 3:
+                        Console.WriteLine();
                         ShowHelpMenu();
                         break;
                     case 4:
                         Console.WriteLine("Exiting Program.");
                         break;
-                    case 0:
-                        break;
                     default:
                         Console.WriteLine("Invalid Selection. Please try again.");
+                        Console.WriteLine();
                         break;
                 }
+                
             }
             while (input != 4);
-
-
         }
 
         static void RunConverterMenu(List<Currency> currencies)
@@ -68,7 +70,7 @@ namespace CurrencyConverter
             bool continueRunning = true;
             do
             {
-                Console.WriteLine("Currency Converter");
+                Console.WriteLine("Currency Converter:");
                 
                 foreach (Currency currency in currencies)
                 {
@@ -98,10 +100,18 @@ namespace CurrencyConverter
                 Console.WriteLine(amount + " " + currency1.Code + " is approximately " + result + " " + currency2.Code + ".");
                 Console.WriteLine();
                 
-
-                //exit the converter
-                Console.WriteLine("Do you want to convert another currency?");
+                //determine if use wants to continue
+                Console.WriteLine("Do you want to convert another currency (y/n)?");
                 input = Console.ReadLine().ToLower();
+
+                //validate their selection
+                while(!input.StartsWith("y") && !input.StartsWith('n'))
+                {
+                    Console.WriteLine("Invalid Input. Please try again.");
+                    Console.WriteLine("Do you want to convert another currency (y/n)?");
+                    input = Console.ReadLine().ToLower();
+                    Console.WriteLine();
+                }
 
                 if (input.StartsWith('n'))
                 {
@@ -110,8 +120,6 @@ namespace CurrencyConverter
                     Console.WriteLine();
                 }
             } while (continueRunning);
-
-
         }
 
         //converts to US Dollars before converting to the target currency, for simplicity
@@ -140,6 +148,7 @@ namespace CurrencyConverter
                         Console.WriteLine(currency.Name + "-" + currency.Code);
 
                     }
+                    Console.WriteLine();
                     Console.WriteLine("Please select a currency by its code:");
                     selection = Console.ReadLine().ToUpper();
                     currQuery = from currency in currencies
@@ -156,7 +165,7 @@ namespace CurrencyConverter
         static double GetValidCurrencyAmount()
         {
             double validAmount = 0;
-            while(validAmount <= 0 )
+            while(validAmount <= 0)
             {
                 Console.WriteLine("How much money do you want to convert?");
                 String input = Console.ReadLine();
@@ -167,10 +176,13 @@ namespace CurrencyConverter
                 catch(FormatException e)
                 {
                     Console.WriteLine("Invalid Amount. Please try again.");
+                    Console.WriteLine();
+                    continue;
                 }
                 if (validAmount <= 0)
                 {
                     Console.WriteLine("The amount must be greater than 0");
+                    Console.WriteLine();
                 }
 
             }
@@ -179,15 +191,26 @@ namespace CurrencyConverter
 
         static void PrintLogFile()
         {
-            Console.WriteLine("Printing Log File.");
+            Console.WriteLine("Beginning of Log File.");
+            Console.WriteLine("----------------------");
+            Console.WriteLine("Log Entry");
+            Console.WriteLine("Log Entry");
+            Console.WriteLine("----------------------");
+            Console.WriteLine("End of Log File.");
+            Console.WriteLine();
         }
 
         static void ShowHelpMenu()
         {
+            Console.WriteLine("Help Menu:");
             Console.WriteLine("This program converts between a list of currencies based on their conversion rates from March 21, 2023.");
             Console.WriteLine("It uses each currency's code for the selection process.");
             Console.WriteLine("The conversion process converts every currency to a common unit. For simplicity, it uses US Dollars.");
+            Console.WriteLine("By default the log file prints to and reads from the bin/debug/.net6.0 folder.");
+            Console.WriteLine("You can change this by updating the file path in Program.cs.");
+            Console.WriteLine("Press enter to leave this menu.");
             Console.ReadLine();
+            Console.WriteLine();
         }
 
         static List<Currency> AddCurrencies(List<Currency> currencies)

@@ -13,3 +13,18 @@ C:\Users\kenkf\Desktop\CodingProjects\CurrencyCalculator\obj\Debug\net6.0\refint
 C:\Users\kenkf\Desktop\CodingProjects\CurrencyCalculator\obj\Debug\net6.0\CurrencyConverter.pdb
 C:\Users\kenkf\Desktop\CodingProjects\CurrencyCalculator\obj\Debug\net6.0\CurrencyConverter.genruntimeconfig.cache
 C:\Users\kenkf\Desktop\CodingProjects\CurrencyCalculator\obj\Debug\net6.0\ref\CurrencyConverter.dll
+C:\Users\Kenny Fugate\Desktop\CurrencyConverter\bin\Debug\net6.0\CurrencyConverter.exe
+C:\Users\Kenny Fugate\Desktop\CurrencyConverter\bin\Debug\net6.0\CurrencyConverter.deps.json
+C:\Users\Kenny Fugate\Desktop\CurrencyConverter\bin\Debug\net6.0\CurrencyConverter.runtimeconfig.json
+C:\Users\Kenny Fugate\Desktop\CurrencyConverter\bin\Debug\net6.0\CurrencyConverter.dll
+C:\Users\Kenny Fugate\Desktop\CurrencyConverter\bin\Debug\net6.0\CurrencyConverter.pdb
+C:\Users\Kenny Fugate\Desktop\CurrencyConverter\obj\Debug\net6.0\CurrencyConverter.csproj.AssemblyReference.cache
+C:\Users\Kenny Fugate\Desktop\CurrencyConverter\obj\Debug\net6.0\CurrencyConverter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kenny Fugate\Desktop\CurrencyConverter\obj\Debug\net6.0\CurrencyConverter.AssemblyInfoInputs.cache
+C:\Users\Kenny Fugate\Desktop\CurrencyConverter\obj\Debug\net6.0\CurrencyConverter.AssemblyInfo.cs
+C:\Users\Kenny Fugate\Desktop\CurrencyConverter\obj\Debug\net6.0\CurrencyConverter.csproj.CoreCompileInputs.cache
+C:\Users\Kenny Fugate\Desktop\CurrencyConverter\obj\Debug\net6.0\CurrencyConverter.dll
+C:\Users\Kenny Fugate\Desktop\CurrencyConverter\obj\Debug\net6.0\refint\CurrencyConverter.dll
+C:\Users\Kenny Fugate\Desktop\CurrencyConverter\obj\Debug\net6.0\CurrencyConverter.pdb
+C:\Users\Kenny Fugate\Desktop\CurrencyConverter\obj\Debug\net6.0\CurrencyConverter.genruntimeconfig.cache
+C:\Users\Kenny Fugate\Desktop\CurrencyConverter\obj\Debug\net6.0\ref\CurrencyConverter.dll
